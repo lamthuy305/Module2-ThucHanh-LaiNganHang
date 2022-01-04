@@ -14,8 +14,10 @@ public class Main {
         System.out.println("Nhập lãi suất tháng(%): ");
         double laiSuat = scanner.nextDouble();
         double lai = 0;
-        lai = (money * month * laiSuat) / 100;
+//        lai = (money * month * laiSuat) / 100;
+        for (int i = 0; i < month; i++) {
+            lai += money * laiSuat/100;
+        }
         System.out.println("Tổng tiền lãi là: " + lai);
-
     }
 }
